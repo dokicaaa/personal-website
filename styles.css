@@ -8833,7 +8833,7 @@ textarea.w-select {
 }
 
 .exp-paragraph {
-  color: #505050;
+  color: #a3a3a3;
   font-size: 1.125rem;
 }
 
@@ -8885,6 +8885,7 @@ textarea.w-select {
 .text-block-22 {
   text-align: center;
   width: 130%;
+  color: #a3a3a3;
   margin-top: 5px;
   font-family: SF, sans-serif;
   font-weight: 700;
