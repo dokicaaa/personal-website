@@ -2512,9 +2512,15 @@ textarea.w-select {
   z-index: 3;
   margin-left: 0;
   padding-left: 0;
+  width: 100px;
+  height: 100px;
   display: block;
   position: absolute;
   bottom: 4%;
+}
+
+.scroll-anim > :not(:first-child) {
+  display: none !important;
 }
 
 .col-inner {
@@ -2892,6 +2898,11 @@ textarea.w-select {
 .nav-avatar {
   width: 54px;
   height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-avatar .image-10 {
   border-radius: 50%;
   overflow: hidden;
 }
@@ -8212,9 +8223,15 @@ textarea.w-select {
   z-index: 3;
   margin-left: 0;
   padding-left: 0;
+  width: 100px;
+  height: 100px;
   display: block;
   position: absolute;
   bottom: 4%;
+}
+
+.scroll-anim > :not(:first-child) {
+  display: none !important;
 }
 
 .col-inner {

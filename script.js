@@ -14505,7 +14505,7 @@
         h(t) && t();
       }
       (o.resize = L(l, E)),
-        (o.scroll = L(l, _)),
+        (o.   scroll = L(l, _)),
         (o.redraw = L()),
         (o.location = function (t) {
           window.location = t;
