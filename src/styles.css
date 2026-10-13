@@ -1144,6 +1144,8 @@ em {
   list-style: none;
   margin: 0;
   padding: 0;
+  /* Keep the horizontal entrance animation inside the list on narrow screens. */
+  overflow: clip;
 }
 .toolbox li {
   padding-block: 23px;
