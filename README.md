@@ -59,6 +59,8 @@ src/cursor.js           Decorative desktop cursor and contextual link labels
 assets/projects/        Optimized WebP images from the original portfolio
 assets/                 Portraits; the original files remain unchanged
 public/                 Favicon and legacy About redirect
+public/social/          Branded image for link previews
+design/social-card.html Editable source for the sharing image
 vite.config.js          Build and development configuration
 ```
 
@@ -101,6 +103,14 @@ live in one timeline under About; the Robotics section focuses
 on the team and projects.
 
 ## Production check
+
+Link previews use the explicit Open Graph and Twitter image in
+`public/social/portfolio-preview-v1.jpg`, rather than the small navigation portrait.
+To update it, open `/design/social-card.html` on the local Vite server, wait for
+Inter Tight to load, and capture the page at exactly 1200 × 630 pixels. This design
+source is not included in the production build. Export a new versioned image and
+update both image URLs in `index.html` when changing the card, since sharing apps
+can cache previously fetched previews.
 
 ```sh
 npm run build
