@@ -66,7 +66,7 @@ img {
   display: block;
   max-width: 100%;
 }
-/* SVG icons avoid OS-specific emoji substitution for Unicode arrows. */
+/* SVG icons avoid OS-specific emoji substitution for decorative symbols. */
 .icon-definitions {
   position: absolute;
   width: 0;
@@ -464,6 +464,15 @@ em {
   vertical-align: middle;
   color: #aaa;
   font-weight: 400;
+}
+.marquee .icon-star {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
 }
 @keyframes marquee {
   to {
