@@ -1,0 +1,93 @@
+{
+  "quality": 80,
+  "originalBytes": 1309032,
+  "optimizedBytes": 644492,
+  "photos": [
+    {
+      "source": "robotics-2.jpeg",
+      "versions": [
+        {
+          "file": "team-640.webp",
+          "width": 640,
+          "height": 426,
+          "bytes": 36556
+        },
+        {
+          "file": "team-2048.webp",
+          "width": 2048,
+          "height": 1365,
+          "bytes": 221752,
+          "quality": 86
+        }
+      ]
+    },
+    {
+      "source": "on-field4.webp",
+      "versions": [
+        {
+          "file": "lift-640.webp",
+          "width": 640,
+          "height": 1140,
+          "bytes": 78990
+        },
+        {
+          "file": "lift-960.webp",
+          "width": 960,
+          "height": 1710,
+          "bytes": 127018
+        }
+      ]
+    },
+    {
+      "source": "on-field1.webp",
+      "versions": [
+        {
+          "file": "field-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 34118
+        },
+        {
+          "file": "field-1600.webp",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 104486
+        }
+      ]
+    },
+    {
+      "source": "robot-panam-sm.webp",
+      "versions": [
+        {
+          "file": "robot-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 28544
+        },
+        {
+          "file": "robot-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 63480
+        }
+      ]
+    },
+    {
+      "source": "robotics-1.jpeg",
+      "versions": [
+        {
+          "file": "match-640.webp",
+          "width": 640,
+          "height": 426,
+          "bytes": 38862
+        },
+        {
+          "file": "match-1600.webp",
+          "width": 1600,
+          "height": 1066,
+          "bytes": 127756
+        }
+      ]
+    }
+  ]
+}

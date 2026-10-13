@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jakov Spirovski — mobile developer, robotics team leader, and website builder based in Skopje, North Macedonia. Explore selected apps, robotics, and web projects."
+      content="Jakov Spirovski — mobile developer and National Robotics Team Lead based in Skopje, North Macedonia. Explore selected apps, robotics, and web development projects."
     />
     <meta name="theme-color" content="#111111" />
     <meta
       property="og:title"
-      content="Jakov Spirovski — Mobile Developer & Builder"
+      content="Jakov Spirovski — Mobile Developer & National Robotics Team Lead"
     />
     <meta
       property="og:description"
       content="Mobile apps. Real-world robotics. Thoughtful websites. Selected work by Jakov Spirovski, based in Skopje."
     />
-    <title>Jakov Spirovski — Mobile Developer & Builder</title>
+    <title>
+      Jakov Spirovski — Mobile Developer & National Robotics Team Lead
+    </title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script type="module" src="/src/main.js"></script>
   </head>
@@ -38,7 +40,7 @@
           />
           <span class="identity-text"
             ><strong>Jakov Spirovski</strong
-            ><span>Mobile developer & builder</span></span
+            ><span>Mobile developer · Robotics lead</span></span
           >
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
@@ -102,7 +104,7 @@
       <section class="hero page-width" id="home" aria-labelledby="hero-title">
         <div class="hero-meta eyebrow">
           <span>(Portfolio / ©<span data-current-year>2026</span>)</span
-          ><span>Mobile developer & builder</span
+          ><span>Mobile developer & National Robotics Team Lead</span
           ><span
             >Skopje, MK <span class="clock-divider">/</span>
             <time data-local-time aria-label="Current time in Skopje"></time
@@ -110,23 +112,26 @@
         </div>
         <h1 class="hero-title" id="hero-title" aria-label="Jakov Spirovski">
           <span class="title-mask"
-            ><span class="title-line first-name" aria-hidden="true"
+            ><span
+              class="title-line first-name"
+              data-reactive-type
+              aria-hidden="true"
               >JAKOV</span
             ></span
           >
           <span class="title-mask"
-            ><span class="title-line last-name" aria-hidden="true"
+            ><span
+              class="title-line last-name"
+              data-reactive-type
+              aria-hidden="true"
               >SPIROVSKI</span
             ></span
           >
         </h1>
         <div class="hero-bottom">
           <p>
-            I build mobile apps, lead a robotics team,<br
-              class="desktop-break"
-            />
-            and bring ideas to life on the web.<br />Based in Skopje. Always
-            building.
+            I build mobile apps and lead<br class="desktop-break" />
+            North Macedonia’s national robotics team.<br />Based in Skopje.
           </p>
           <a class="outline-button" href="#apps"
             ><span>Explore the work</span><span aria-hidden="true">↘</span></a
@@ -140,16 +145,16 @@
 
       <div
         class="marquee"
-        aria-label="Mobile apps, Flutter, robotics, web development, design"
+        aria-label="Mobile apps, robotics, web development, design"
       >
         <div class="marquee-track" aria-hidden="true">
           <span
-            >Mobile apps <b>✳</b> Flutter <b>✳</b> Robotics <b>✳</b> Web
-            development <b>✳</b> Design <b>✳</b>&nbsp;</span
+            >Mobile apps <b>✳</b> Robotics <b>✳</b> Web development
+            <b>✳</b> Design <b>✳</b>&nbsp;</span
           >
           <span
-            >Mobile apps <b>✳</b> Flutter <b>✳</b> Robotics <b>✳</b> Web
-            development <b>✳</b> Design <b>✳</b>&nbsp;</span
+            >Mobile apps <b>✳</b> Robotics <b>✳</b> Web development
+            <b>✳</b> Design <b>✳</b>&nbsp;</span
           >
         </div>
       </div>
@@ -169,7 +174,7 @@
           >
             <span class="motion-dot" aria-hidden="true"></span
             ><span data-motion-label>Pause motion</span></button
-          ><span>2022 — 2025</span>
+          ><span><span data-project-count>04</span> apps</span>
         </div>
         <div class="section-heading" data-reveal>
           <h2 id="apps-title">
@@ -184,8 +189,54 @@
           <div class="project-list">
             <article
               class="project-row is-active"
-              data-project="unifinance"
+              data-project="base42"
               data-project-number="01"
+              data-project-category="Flutter / Community app"
+            >
+              <a
+                class="project-link"
+                href="https://github.com/42dotmk/base42-events-mobile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="project-main">
+                  <span class="project-number eyebrow">01</span>
+                  <div>
+                    <h3>Base42</h3>
+                    <p class="project-type eyebrow">
+                      Community / Hackerspace app
+                    </p>
+                  </div>
+                  <span class="project-year eyebrow">Latest</span>
+                </div>
+                <p class="project-description">
+                  A mobile app for the Base42 hackerspace. Discover upcoming
+                  events, book spaces, RSVP for events, and explore the
+                  community’s open-source projects.
+                </p>
+                <div class="project-footer eyebrow">
+                  <span>Flutter · Mobile development</span>
+                  <span class="project-cta"
+                    >View project <span aria-hidden="true">↗</span></span
+                  >
+                </div>
+                <div class="project-mobile-media">
+                  <img
+                    class="project-mobile-image"
+                    src="./assets/projects/base42-app/base42.webp"
+                    width="854"
+                    height="623"
+                    alt="Base42 app mockup showing the welcome screen, upcoming events, and space booking"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </a>
+            </article>
+            <article
+              class="project-row"
+              data-project="unifinance"
+              data-project-number="02"
               data-project-category="Flutter / AI / Firebase"
             >
               <a
@@ -195,7 +246,7 @@
                 rel="noopener noreferrer"
               >
                 <div class="project-main">
-                  <span class="project-number eyebrow">01</span>
+                  <span class="project-number eyebrow">02</span>
                   <div>
                     <h3>UniFinance</h3>
                     <p class="project-type eyebrow">
@@ -230,7 +281,7 @@
             <article
               class="project-row"
               data-project="godutch"
-              data-project-number="02"
+              data-project-number="03"
               data-project-category="Android / Java / OCR"
             >
               <a
@@ -240,7 +291,7 @@
                 rel="noopener noreferrer"
               >
                 <div class="project-main">
-                  <span class="project-number eyebrow">02</span>
+                  <span class="project-number eyebrow">03</span>
                   <div>
                     <h3>GoDutch</h3>
                     <p class="project-type eyebrow">
@@ -275,7 +326,7 @@
             <article
               class="project-row"
               data-project="sync"
-              data-project-number="03"
+              data-project-number="04"
               data-project-category="Flutter / Dart / Firebase"
             >
               <a
@@ -285,7 +336,7 @@
                 rel="noopener noreferrer"
               >
                 <div class="project-main">
-                  <span class="project-number eyebrow">03</span>
+                  <span class="project-number eyebrow">04</span>
                   <div>
                     <h3>Sync</h3>
                     <p class="project-type eyebrow">
@@ -327,6 +378,16 @@
               >
               <img
                 class="preview-image is-current"
+                data-preview="base42"
+                src="./assets/projects/base42-app/base42.webp"
+                width="854"
+                height="623"
+                alt="Base42 app preview"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                class="preview-image"
                 data-preview="unifinance"
                 src="./assets/projects/unifinance.webp"
                 width="1200"
@@ -352,11 +413,12 @@
                 alt="Sync app preview"
                 loading="lazy"
               />
-              <span class="preview-corner eyebrow">An idea, made real.</span>
             </div>
             <div class="preview-caption eyebrow">
-              <span><span data-preview-number>01</span> / 03</span
-              ><span data-preview-category>Flutter / AI / Firebase</span>
+              <span
+                ><span data-preview-number>01</span> /
+                <span data-project-count>04</span></span
+              ><span data-preview-category>Flutter / Community app</span>
             </div>
             <div class="preview-progress" aria-hidden="true"><span></span></div>
           </aside>
@@ -380,10 +442,11 @@
             <div class="robotics-copy" data-reveal>
               <p>Building robots.<br />Growing a team.</p>
               <p>
-                I lead and mentor North Macedonia’s national robotics team at
-                the FIRST Global Challenge. From programming autonomous movement
-                to guiding the next generation of builders, this is where
-                software becomes something you can touch.
+                I lead North Macedonia’s national robotics team at the FIRST
+                Global Challenge, coordinating the team, organizing activities,
+                and leading fundraising efforts. My mission is to raise
+                awareness of robotics in Macedonia and create more opportunities
+                for young people to get involved.
               </p>
               <a
                 class="text-link eyebrow"
@@ -396,58 +459,179 @@
           </div>
           <div
             class="robotics-gallery"
-            aria-label="Team North Macedonia at FIRST Global Challenge 2024"
+            aria-label="Team North Macedonia at FIRST Global: five moments from the competition"
           >
-            <figure class="robotics-photo photo-one" data-parallax="-35">
-              <img
-                src="./assets/projects/robotics-walk.webp"
-                width="570"
-                height="743"
-                alt="Team North Macedonia walking together at FIRST Global Challenge 2024"
-                loading="lazy"
-              />
-              <figcaption class="eyebrow">01 / The team</figcaption>
+            <figure class="robotics-photo robotics-photo-team" data-reveal>
+              <button
+                class="robotics-photo-link"
+                type="button"
+                aria-label="Open photo: Built together"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="./assets/robotics/optimized/team-2048.webp"
+                  srcset="
+                    ./assets/robotics/optimized/team-640.webp   640w,
+                    ./assets/robotics/optimized/team-2048.webp 2048w
+                  "
+                  sizes="(max-width: 800px) 90vw, (min-width: 1896px) 1195px, 62vw"
+                  width="2048"
+                  height="1365"
+                  alt="North Macedonia team members preparing their robot together beside the competition field"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="robotics-photo-expand" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>
+                <span class="eyebrow">01 / The team</span
+                ><span>Built together.</span>
+              </figcaption>
             </figure>
-            <figure class="robotics-photo photo-two" data-parallax="35">
-              <img
-                src="./assets/projects/robotics-robot.webp"
-                width="576"
-                height="741"
-                alt="T.E.A., the team's 2024 competition robot"
-                loading="lazy"
-              />
-              <figcaption class="eyebrow">02 / The build</figcaption>
+            <figure class="robotics-photo robotics-photo-lift" data-reveal>
+              <button
+                class="robotics-photo-link"
+                type="button"
+                aria-label="Open photo: Lift off"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="./assets/robotics/optimized/lift-960.webp"
+                  srcset="
+                    ./assets/robotics/optimized/lift-640.webp 640w,
+                    ./assets/robotics/optimized/lift-960.webp 960w
+                  "
+                  sizes="(max-width: 800px) 70vw, (min-width: 1896px) 700px, 38vw"
+                  width="960"
+                  height="1710"
+                  alt="North Macedonia's robot suspended above the field during the climbing challenge"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="robotics-photo-expand" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>
+                <span class="eyebrow">02 / In motion</span
+                ><span>Lift off.</span>
+              </figcaption>
             </figure>
-            <figure class="robotics-photo photo-three" data-parallax="-20">
-              <img
-                src="./assets/projects/robotics-team.webp"
-                width="573"
-                height="739"
-                alt="Team North Macedonia celebrating a match at FIRST Global Challenge 2024"
-                loading="lazy"
-              />
-              <figcaption class="eyebrow">
-                03 / The moments that matter
+            <figure class="robotics-photo robotics-photo-field" data-reveal>
+              <button
+                class="robotics-photo-link"
+                type="button"
+                aria-label="Open photo: Under the lights"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="./assets/robotics/optimized/field-1600.webp"
+                  srcset="
+                    ./assets/robotics/optimized/field-640.webp   640w,
+                    ./assets/robotics/optimized/field-1600.webp 1600w
+                  "
+                  sizes="(max-width: 800px) 55vw, (min-width: 1896px) 480px, 27vw"
+                  width="1600"
+                  height="1067"
+                  alt="Team members and fellow competitors standing behind their robots under the arena lights"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="robotics-photo-expand" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>
+                <span class="eyebrow">03 / On the field</span
+                ><span>Under the lights.</span>
+              </figcaption>
+            </figure>
+            <figure class="robotics-photo robotics-photo-robot" data-reveal>
+              <button
+                class="robotics-photo-link"
+                type="button"
+                aria-label="Open photo: Ready to roll"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="./assets/robotics/optimized/robot-1200.webp"
+                  srcset="
+                    ./assets/robotics/optimized/robot-640.webp   640w,
+                    ./assets/robotics/optimized/robot-1200.webp 1200w
+                  "
+                  sizes="(max-width: 800px) 55vw, (min-width: 1896px) 480px, 27vw"
+                  width="1200"
+                  height="800"
+                  alt="The North Macedonia competition robot on the field, surrounded by colored game balls"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="robotics-photo-expand" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>
+                <span class="eyebrow">04 / The robot</span
+                ><span>Ready to roll.</span>
+              </figcaption>
+            </figure>
+            <figure class="robotics-photo robotics-photo-match" data-reveal>
+              <button
+                class="robotics-photo-link"
+                type="button"
+                aria-label="Open photo: Every second counts"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="./assets/robotics/optimized/match-1600.webp"
+                  srcset="
+                    ./assets/robotics/optimized/match-640.webp   640w,
+                    ./assets/robotics/optimized/match-1600.webp 1600w
+                  "
+                  sizes="(max-width: 800px) 55vw, (min-width: 1896px) 480px, 27vw"
+                  width="1600"
+                  height="1066"
+                  alt="Robots climbing the competition structure in the final seconds of a FIRST Global match"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="robotics-photo-expand" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>
+                <span class="eyebrow">05 / Match day</span
+                ><span>Every second counts.</span>
               </figcaption>
             </figure>
           </div>
-          <div class="experience-list">
-            <div class="experience-row" data-reveal>
-              <span class="eyebrow">2024 — Present</span>
-              <h3>National FIRST Global Representative</h3>
-              <p>
-                Leading and mentoring North Macedonia’s national robotics team.
-              </p>
+          <dialog class="robotics-lightbox" aria-label="Robotics photo gallery">
+            <div class="robotics-lightbox-top">
+              <span class="eyebrow">FIRST Global / North Macedonia</span>
+              <button
+                class="robotics-lightbox-close eyebrow"
+                type="button"
+                autofocus
+                aria-label="Close photo gallery"
+              >
+                Close <span aria-hidden="true">×</span>
+              </button>
             </div>
-            <div class="experience-row" data-reveal>
-              <span class="eyebrow">2022 — 2023</span>
-              <h3>Robotics team programmer</h3>
-              <p>
-                Movement, autonomous features, and a bronze-medal finish with
-                the team.
-              </p>
+            <div class="robotics-lightbox-stage">
+              <img alt="" decoding="async" draggable="false" />
             </div>
-          </div>
+            <div class="robotics-lightbox-bottom">
+              <p
+                class="robotics-lightbox-caption"
+                aria-live="polite"
+                aria-atomic="true"
+              ></p>
+              <div class="robotics-lightbox-controls">
+                <button
+                  type="button"
+                  data-gallery-previous
+                  aria-label="Previous photo"
+                >
+                  ←
+                </button>
+                <button type="button" data-gallery-next aria-label="Next photo">
+                  →
+                </button>
+              </div>
+            </div>
+          </dialog>
           <a
             class="hardware-project"
             href="https://github.com/trajnovd/code-leap"
@@ -489,37 +673,63 @@
           <span>(03 / On the web)</span><span>Design & development</span>
         </div>
         <div class="section-heading" data-reveal>
-          <h2 id="websites-title">A place<br /><em>for an idea.</em></h2>
+          <h2 id="websites-title">Web design<br /><em>& development.</em></h2>
           <p>
-            Bringing the same attention to<br />the things I build for the web.
+            Websites I’ve designed and developed<br />for businesses and
+            communities.
           </p>
         </div>
-        <a
-          class="web-project"
-          href="https://earthhub.webflow.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="web-project-image">
-            <span class="web-project-label eyebrow"
-              >Concept project / Webflow</span
-            ><img
-              src="./assets/projects/earthhub.webp"
-              width="1440"
-              height="767"
-              alt="EarthHub nature and exploration concept website shown on a laptop"
-              loading="lazy"
-            /><span class="round-link" aria-hidden="true">↗</span>
-          </div>
-          <div class="web-project-info">
-            <h3>EarthHub</h3>
-            <p>
-              A concept at the intersection of nature,<br />exploration, and
-              personal growth.
-            </p>
-            <span class="eyebrow">Visit website ↗</span>
-          </div>
-        </a>
+        <div class="web-project-grid">
+          <a
+            class="web-project"
+            href="https://grizzlyigloos.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="web-project-image">
+              <span class="web-project-label eyebrow"
+                >01 / Hospitality website</span
+              ><img
+                src="./assets/websites/mockups/mockup-grizzly.png"
+                width="1440"
+                height="767"
+                alt="Grizzli Igloos website shown in a laptop frame"
+                loading="lazy"
+              /><span class="round-link" aria-hidden="true">↗</span>
+            </div>
+            <div class="web-project-info">
+              <h3>Grizzli Igloos</h3>
+              <p>
+                Website for the Grizzly Mountain Center, located in the Jasen
+                mountain range.
+              </p>
+              <span class="eyebrow">Visit website ↗</span>
+            </div>
+          </a>
+          <a
+            class="web-project"
+            href="https://firstglobal.mk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="web-project-image">
+              <span class="web-project-label eyebrow"
+                >02 / National robotics team</span
+              ><img
+                src="./assets/websites/mockups/mockup-first_mkd.png"
+                width="1440"
+                height="767"
+                alt="FIRST Global Macedonia website shown in a laptop frame"
+                loading="lazy"
+              /><span class="round-link" aria-hidden="true">↗</span>
+            </div>
+            <div class="web-project-info">
+              <h3>FIRST Global Macedonia</h3>
+              <p>Website for the national robotics team.</p>
+              <span class="eyebrow">Visit website ↗</span>
+            </div>
+          </a>
+        </div>
       </section>
 
       <section
@@ -532,9 +742,9 @@
           ><span>Curiosity → Ideas → Code</span>
         </div>
         <h2 class="about-statement" id="about-title" data-word-reveal>
-          I’m Jakov. I build apps that feel <em>simple,</em> useful, and good to
-          use. I’m just as happy writing code as I am building a robot with my
-          team. Always curious. Always making something.
+          I’m Jakov, an independent mobile developer focused on building apps
+          that are <em>stunning yet functional.</em> I study at FINKI and lead
+          North Macedonia’s national robotics team.
         </h2>
         <div class="about-details">
           <figure class="about-portrait">
@@ -549,40 +759,77 @@
               Jakov Spirovski / Skopje, MK
             </figcaption>
           </figure>
-          <div class="about-bio" data-reveal>
-            <p>
-              I’m an independent software developer based in Skopje, North
-              Macedonia. Mobile development is my main focus, alongside robotics
-              and building websites for clients.
-            </p>
-            <p>
-              I study at the Faculty of Computer Science and Engineering (FINKI,
-              UKIM), and work with people to turn their ideas into thoughtful,
-              functional software.
-            </p>
+          <div class="toolbox">
+            <h3 class="eyebrow" data-reveal>My everyday toolkit</h3>
+            <ul>
+              <li>
+                <span class="tool-name">Flutter</span>
+                <span class="tool-category">Mobile</span>
+              </li>
+              <li>
+                <span class="tool-name">Dart & Java</span>
+                <span class="tool-category">Languages</span>
+              </li>
+              <li>
+                <span class="tool-name">Firebase</span>
+                <span class="tool-category">Backend</span>
+              </li>
+              <li>
+                <span class="tool-name">Figma & Webflow</span>
+                <span class="tool-category">Design & web</span>
+              </li>
+              <li>
+                <span class="tool-name">C++ & Arduino</span>
+                <span class="tool-category">Robotics</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="about-experience" aria-labelledby="experience-title">
+          <div class="experience-heading" data-reveal>
+            <h3 id="experience-title">Experience</h3>
             <a
               class="text-link eyebrow"
               href="https://www.linkedin.com/in/jakov-spirovski-9368a8334/"
               target="_blank"
               rel="noopener noreferrer"
-              >More about my experience <span aria-hidden="true">↗</span></a
+              >More on LinkedIn <span aria-hidden="true">↗</span></a
             >
           </div>
-          <div class="toolbox" data-reveal>
-            <h3 class="eyebrow">My everyday toolkit</h3>
-            <ul>
-              <li>Flutter <span>Mobile</span></li>
-              <li>Dart & Java <span>Languages</span></li>
-              <li>Firebase <span>Backend</span></li>
-              <li>Figma & Webflow <span>Design & web</span></li>
-              <li>C++ & Arduino <span>Robotics</span></li>
-            </ul>
-            <div class="freelance-note">
+          <div class="experience-list">
+            <div class="experience-row" data-reveal>
+              <span class="eyebrow">April — August 2026</span>
+              <h4>Software development internship · Base42</h4>
+              <p>
+                Worked on the Base42 hackerspace mobile app in Flutter, with
+                space booking, event discovery, and RSVP ticketing features.
+              </p>
+            </div>
+            <div class="experience-row" data-reveal>
+              <span class="eyebrow">2024 — Present</span>
+              <h4>National FIRST Global Representative</h4>
+              <p>
+                Leading and mentoring North Macedonia’s national robotics team.
+              </p>
+            </div>
+            <div class="experience-row" data-reveal>
               <span class="eyebrow">2023 — Present</span>
-              <p>Independent mobile developer</p>
+              <h4>Independent mobile developer</h4>
+              <p>
+                Building mobile apps and helping clients with mobile development
+                projects.
+              </p>
+            </div>
+            <div class="experience-row" data-reveal>
+              <span class="eyebrow">2022 — 2023</span>
+              <h4>Robotics team programmer</h4>
+              <p>
+                Movement, autonomous features, and a bronze-medal finish with
+                the team.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <section
@@ -595,7 +842,16 @@
           ><span>Let’s make it happen</span>
         </div>
         <a class="contact-headline" href="mailto:jakovspirovski.dev@gmail.com"
-          ><h2 id="contact-title">LET’S<br /><span>BUILD.</span></h2>
+          ><h2 id="contact-title" aria-label="Let’s build.">
+            <span class="contact-line" data-reactive-type aria-hidden="true"
+              >LET’S</span
+            ><br /><span
+              class="contact-line contact-build"
+              data-reactive-type
+              aria-hidden="true"
+              >BUILD.</span
+            >
+          </h2>
           <span class="contact-arrow" aria-hidden="true">↗</span></a
         >
         <div class="contact-bottom">
@@ -635,7 +891,8 @@
     </footer>
 
     <div class="hover-preview" aria-hidden="true">
-      <img alt="" /><span class="hover-preview-badge eyebrow">View ↗</span>
+      <img alt="" />
     </div>
+    <div class="pointer-halo" aria-hidden="true"><span></span></div>
   </body>
 </html>

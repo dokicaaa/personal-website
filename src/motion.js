@@ -58,13 +58,15 @@ export function initMotion() {
 
     context = gsap.context(() => {
       if (!hasPlayedIntro && window.scrollY < 100) {
-        gsap.from(".title-line", {
-          yPercent: 115,
-          rotation: 3,
-          duration: 1.25,
-          stagger: 0.13,
-          ease: "power4.out",
-          delay: 0.12,
+        gsap.utils.toArray(".title-line").forEach((line, index) => {
+          gsap.from(line.querySelectorAll(".type-glyph"), {
+            yPercent: 125,
+            rotation: 7,
+            duration: 1.2,
+            stagger: 0.045,
+            ease: "power4.out",
+            delay: 0.12 + index * 0.22,
+          });
         });
         gsap.from(".hero-meta, .hero-bottom, .hero-index", {
           autoAlpha: 0,
@@ -76,6 +78,18 @@ export function initMotion() {
         });
       }
       hasPlayedIntro = true;
+
+      const contact = document.querySelector(".contact-headline");
+      if (contact.getBoundingClientRect().top >= window.innerHeight * 0.92) {
+        gsap.from(contact.querySelectorAll(".type-glyph"), {
+          yPercent: 120,
+          rotation: 5,
+          duration: 1.1,
+          stagger: 0.035,
+          ease: "power4.out",
+          scrollTrigger: { trigger: contact, start: "top 92%", once: true },
+        });
+      }
 
       gsap.utils.toArray("[data-reveal]").forEach((element) => {
         // Elements already on screen must remain visible when motion is resumed.
@@ -90,9 +104,21 @@ export function initMotion() {
         });
       });
 
+      const toolkit = document.querySelector(".toolbox ul");
+      if (toolkit.getBoundingClientRect().top >= window.innerHeight * 0.9) {
+        gsap.from(toolkit.children, {
+          autoAlpha: 0,
+          x: 24,
+          duration: 0.7,
+          stagger: 0.09,
+          ease: "power3.out",
+          scrollTrigger: { trigger: toolkit, start: "top 90%", once: true },
+        });
+      }
+
       gsap.fromTo(
         ".reveal-word",
-        { color: "#666666" },
+        { color: "#454545" },
         {
           color: "#ededed",
           stagger: 0.08,
@@ -105,21 +131,6 @@ export function initMotion() {
           },
         },
       );
-
-      if (window.matchMedia("(min-width: 801px)").matches) {
-        gsap.utils.toArray("[data-parallax]").forEach((element) => {
-          gsap.to(element, {
-            y: Number(element.dataset.parallax),
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".robotics-gallery",
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 1,
-            },
-          });
-        });
-      }
     });
     ScrollTrigger.refresh();
   }

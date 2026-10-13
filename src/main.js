@@ -1,10 +1,12 @@
 import "@fontsource-variable/inter-tight";
 import "@fontsource-variable/inter-tight/wght-italic.css";
-import "@fontsource/ibm-plex-mono/latin-400.css";
 import "./styles.css";
 import { initNavigation } from "./navigation.js";
 import { initMotion } from "./motion.js";
 import { initProjectPreviews } from "./project-preview.js";
+import { initTypography } from "./typography.js";
+import { initCursor } from "./cursor.js";
+import { initRoboticsGallery } from "./robotics-gallery.js";
 
 document.querySelectorAll("[data-current-year]").forEach((element) => {
   element.textContent = String(new Date().getFullYear());
@@ -24,5 +26,8 @@ updateLocalTime();
 setInterval(updateLocalTime, 60_000);
 
 initNavigation();
+initTypography();
 initMotion();
 initProjectPreviews();
+initCursor();
+initRoboticsGallery();
