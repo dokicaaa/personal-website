@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 
 export function initCursor() {
   const cursor = document.querySelector(".pointer-halo");
-  const label = cursor.querySelector("span");
+  const label = cursor.querySelector("[data-cursor-label]");
   const pointer = window.matchMedia(
     "(hover: hover) and (pointer: fine) and (min-width: 801px)",
   );
@@ -31,7 +31,7 @@ export function initCursor() {
         ".project-link, .web-project, .hardware-project",
       );
       const email = link?.matches(".contact-headline");
-      label.textContent = project ? "View ↗" : email ? "Email ↗" : "";
+      label.textContent = project ? "View" : email ? "Email" : "";
       cursor.classList.toggle("is-action", Boolean(project || email));
       cursor.classList.toggle("is-link", Boolean(link));
       if (!visible) {

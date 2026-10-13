@@ -66,6 +66,41 @@ img {
   display: block;
   max-width: 100%;
 }
+/* SVG icons avoid OS-specific emoji substitution for Unicode arrows. */
+.icon-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.icon-arrow {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icon-arrow--down-right {
+  transform: rotate(90deg);
+}
+.icon-arrow--down {
+  transform: rotate(135deg);
+}
+.icon-arrow--up {
+  transform: rotate(-45deg);
+}
+.icon-arrow--left {
+  transform: rotate(225deg);
+}
+.icon-arrow--right {
+  transform: rotate(45deg);
+}
 h1,
 h2,
 h3,
@@ -703,6 +738,14 @@ em {
   text-transform: uppercase;
   white-space: nowrap;
 }
+.pointer-halo .cursor-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.pointer-halo:not(.is-action) .cursor-caption {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) and (min-width: 801px) {
   .project-link:hover h3 {
     font-weight: 380;
@@ -1212,6 +1255,11 @@ em {
   line-height: 1;
   font-weight: 300;
   transition: transform 0.45s;
+}
+.contact-arrow .icon-arrow {
+  width: 0.8em;
+  height: 0.8em;
+  vertical-align: 0;
 }
 .contact-headline:hover .contact-arrow {
   transform: translate(12px, -12px);
