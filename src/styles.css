@@ -74,7 +74,8 @@ img {
   overflow: hidden;
   pointer-events: none;
 }
-.icon-arrow {
+.icon-arrow,
+.icon-plus {
   display: inline-block;
   width: 1em;
   height: 1em;
