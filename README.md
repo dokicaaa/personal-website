@@ -70,7 +70,7 @@ Add scripts in `src/` as needed. Never edit generated files in `dist/`.
 The mobile apps are Base42, UniFinance, GoDutch, and Sync, in that order; Pulse-Stop
 remains in the hardware section. Base42 uses the supplied mockup, optimized to a
 transparent WebP in `assets/projects/base42-app/`, with the original PNG preserved.
-The website showcase features Grizzli Igloos and FIRST Global Macedonia, using the
+The website showcase features Grizzly Igloos and FIRST Global Macedonia, using the
 supplied laptop mockups in `assets/websites/mockups/` and linking to
 `https://grizzlyigloos.com/` and `https://firstglobal.mk/`. EarthHub has been removed
 from the showcase. Source URLs for migrated imagery are in `assets/projects/sources.json`.
