@@ -1274,24 +1274,9 @@ em {
   text-underline-offset: 5px;
 }
 
-@media (min-width: 1920px) {
-  .hero {
-    min-height: 1050px;
-  }
-}
-
 @media (max-width: 1100px) {
   .page-width {
     width: calc(100% - 64px);
-  }
-  .hero {
-    min-height: 820px;
-  }
-  .first-name {
-    font-size: 24vw;
-  }
-  .last-name {
-    font-size: 16.7vw;
   }
   .project-description,
   .project-footer {
@@ -1306,6 +1291,55 @@ em {
   }
   .project-year {
     font-size: 9px;
+  }
+}
+
+@media (min-width: 801px) {
+  .hero {
+    min-height: 100dvh;
+    padding-block: clamp(110px, 14dvh, 155px) clamp(18px, 2.6dvh, 25px);
+  }
+  .hero-title {
+    padding-block: clamp(24px, 4dvh, 56px) clamp(16px, 2.5dvh, 32px);
+  }
+  /* Reserve room for the intro and CTA on wide, short laptop screens. */
+  .first-name {
+    font-size: min(18vw, 28dvh, 340px);
+  }
+  .last-name {
+    font-size: min(13vw, 20dvh, 250px);
+  }
+  .hero-bottom {
+    padding-top: clamp(8px, 1.5dvh, 16px);
+  }
+  .hero-bottom p {
+    font-size: clamp(18px, min(1.55vw, 2.6dvh), 26px);
+  }
+  .hero-index {
+    margin-top: clamp(16px, 2.5dvh, 28px);
+  }
+}
+
+@media (min-width: 801px) and (max-height: 600px) {
+  .hero {
+    /* Leave space for navigation, metadata, intro, CTA, and scroll hint. */
+    --hero-type-space: max(80px, calc(100dvh - 280px));
+    padding-top: 100px;
+  }
+  .hero-title {
+    padding-block: 16px 12px;
+  }
+  .first-name {
+    font-size: min(18vw, calc(var(--hero-type-space) * 0.62), 168px);
+  }
+  .last-name {
+    font-size: min(13vw, calc(var(--hero-type-space) * 0.45), 120px);
+  }
+  .hero-bottom {
+    padding-top: 8px;
+  }
+  .hero-index {
+    margin-top: 12px;
   }
 }
 
