@@ -1290,7 +1290,7 @@ em {
     grid-template-columns: 22px 1fr auto;
   }
   .project-year {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 
@@ -1473,7 +1473,7 @@ em {
     padding: 6px;
   }
   .has-mobile-preview .preview-caption {
-    font-size: 9px;
+    font-size: 10px;
     margin-top: 12px;
   }
   .has-mobile-preview .preview-progress {
@@ -1559,7 +1559,7 @@ em {
     font-size: 16px;
   }
   .hardware-content .eyebrow {
-    font-size: 9px;
+    font-size: 10px;
   }
   .about-details {
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -1596,13 +1596,13 @@ em {
     width: calc(100% - 40px);
   }
   .eyebrow {
-    font-size: 10px;
+    font-size: 11px;
   }
   .identity-text strong {
     font-size: 14px;
   }
   .identity-text > span {
-    font-size: 10px;
+    font-size: 11px;
   }
   .identity img {
     width: 39px;
@@ -1613,7 +1613,7 @@ em {
     min-height: calc(100svh - 12px);
   }
   .hero-meta {
-    font-size: 9px;
+    font-size: 10px;
   }
   .clock-divider,
   [data-local-time] {
@@ -1637,12 +1637,12 @@ em {
   }
   .outline-button {
     padding: 15px 20px;
-    font-size: 10px;
+    font-size: 11px;
   }
   .hero-index {
     margin-top: auto;
     padding-top: 45px;
-    font-size: 9px;
+    font-size: 10px;
   }
   .marquee {
     padding-block: 17px;
@@ -1685,14 +1685,14 @@ em {
     margin-top: 10px;
   }
   .project-type {
-    font-size: 9px;
+    font-size: 10px;
     margin-top: 12px;
   }
   .project-description {
     font-size: 16px;
   }
   .project-footer {
-    font-size: 9px;
+    font-size: 10px;
     gap: 15px;
   }
   .project-mobile-media {
@@ -1707,7 +1707,7 @@ em {
     font-size: 16px;
   }
   .robotics-photo figcaption .eyebrow {
-    font-size: 8px;
+    font-size: 9px;
   }
   .robotics-photo-expand {
     top: 10px;
@@ -1721,7 +1721,7 @@ em {
     height: calc(100dvh - 16px);
   }
   .robotics-lightbox-top > span {
-    font-size: 9px;
+    font-size: 10px;
   }
   .robotics-lightbox-caption {
     font-size: 15px;
@@ -1757,7 +1757,7 @@ em {
   .web-project-label {
     top: 18px;
     left: 18px;
-    font-size: 9px;
+    font-size: 10px;
   }
   .round-link {
     width: 48px;
@@ -1783,7 +1783,7 @@ em {
   .web-project-info > span {
     grid-column: 2;
     grid-row: 1;
-    font-size: 9px;
+    font-size: 10px;
   }
   .section .about-statement {
     font-size: 37px;
@@ -1807,7 +1807,7 @@ em {
     padding-bottom: 50px;
   }
   .contact-section .section-top {
-    font-size: 9px;
+    font-size: 10px;
     margin-bottom: 48px;
   }
   .contact-headline h2 {
@@ -1839,7 +1839,7 @@ em {
   }
   .site-footer > span {
     order: 2;
-    font-size: 9px;
+    font-size: 10px;
   }
   .site-footer nav {
     width: 100%;
@@ -1848,7 +1848,7 @@ em {
   }
   .back-to-top {
     order: 3;
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 
