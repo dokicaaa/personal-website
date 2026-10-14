@@ -959,6 +959,8 @@ em {
   letter-spacing: -0.035em;
 }
 .experience-footer {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 24px;
 }
 .experience-footer .text-link {
@@ -1119,9 +1121,6 @@ em {
   white-space: nowrap;
 }
 
-.about-section {
-  border-top: 1px solid var(--line);
-}
 .section .about-statement {
   font-size: clamp(40px, 5.1vw, 90px);
   max-width: 1500px;
