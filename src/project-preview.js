@@ -6,6 +6,9 @@ export function initProjectPreviews() {
     count.textContent = String(rows.length).padStart(2, "0");
   });
   const previews = [...document.querySelectorAll("[data-preview]")];
+  const layout = document.querySelector(".work-layout");
+  const panel = document.querySelector(".project-preview");
+  const header = document.querySelector(".floating-header");
   const stage = document.querySelector(".preview-stage");
   const floating = document.querySelector(".hover-preview");
   const floatingImage = floating.querySelector("img");
@@ -13,6 +16,9 @@ export function initProjectPreviews() {
     "(hover: hover) and (pointer: fine) and (min-width: 801px)",
   );
   const desktop = window.matchMedia("(min-width: 801px)");
+  const mobilePreview = window.matchMedia(
+    "(max-width: 800px) and (min-height: 560px)",
+  );
   let activeRow = rows[0];
   let hoveredRow = null;
   let paused = document.documentElement.classList.contains("motion-paused");
@@ -140,10 +146,32 @@ export function initProjectPreviews() {
     row.addEventListener("focusin", () => activate(row));
   });
 
-  // Choose the row closest to the viewport's reading position; scrolling remains native.
+  // Keep the mobile preview below the portrait pill, including when text zoom
+  // or a breakpoint changes its height. The panel's own height defines the
+  // unobscured reading area instead of a hard-coded scroll threshold.
+  let previewTop = 88;
+  function measureMobilePreview() {
+    if (!mobilePreview.matches) return;
+    previewTop = Math.ceil(header.getBoundingClientRect().bottom + 12);
+    layout.style.setProperty("--mobile-preview-top", `${previewTop}px`);
+    layout.style.setProperty(
+      "--mobile-preview-height",
+      `${panel.offsetHeight}px`,
+    );
+  }
+
+  function updateLayout() {
+    layout.classList.toggle("has-mobile-preview", mobilePreview.matches);
+    measureMobilePreview();
+    hideFloating();
+    updateOnScroll();
+  }
+
+  // Choose the row closest to the unobscured reading position. All scrolling
+  // stays native, including reverse scrolling and fast swipes through the list.
   let scheduled = false;
   function updateOnScroll() {
-    if (scheduled || !desktop.matches) return;
+    if (scheduled || (!desktop.matches && !mobilePreview.matches)) return;
     scheduled = true;
     requestAnimationFrame(() => {
       scheduled = false;
@@ -157,15 +185,20 @@ export function initProjectPreviews() {
         if (underPointer?.closest("[data-project]") === hoveredRow) return;
         hideFloating();
       }
+      const readingTop = mobilePreview.matches
+        ? previewTop + panel.offsetHeight
+        : 120;
       const focusedRow = document.activeElement.closest?.("[data-project]");
       if (focusedRow && document.activeElement.matches(":focus-visible")) {
         const rect = focusedRow.getBoundingClientRect();
-        if (rect.bottom > 120 && rect.top < window.innerHeight) {
+        if (rect.bottom > readingTop && rect.top < window.innerHeight) {
           if (focusedRow !== activeRow) activate(focusedRow);
           return;
         }
       }
-      const anchor = window.innerHeight * 0.46;
+      const anchor = mobilePreview.matches
+        ? readingTop + Math.max(0, window.innerHeight - readingTop) * 0.38
+        : window.innerHeight * 0.46;
       let nearest = rows[0];
       let distance = Infinity;
       rows.forEach((row) => {
@@ -181,7 +214,7 @@ export function initProjectPreviews() {
   }
   window.addEventListener("scroll", updateOnScroll, { passive: true });
   window.addEventListener("blur", hideFloating);
-  window.addEventListener("resize", hideFloating);
+  window.addEventListener("resize", updateLayout);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Tab" || event.key === "Escape") hideFloating();
   });
@@ -189,10 +222,19 @@ export function initProjectPreviews() {
     hideFloating();
     updateOnScroll();
   });
+  mobilePreview.addEventListener("change", updateLayout);
   document.addEventListener("portfolio:motion", (event) => {
     paused = event.detail.paused;
     hideFloating();
   });
   stage.addEventListener("pointerenter", hideFloating);
-  activate(activeRow);
+  const resizeObserver = new ResizeObserver(() => {
+    measureMobilePreview();
+    updateOnScroll();
+  });
+  resizeObserver.observe(header);
+  resizeObserver.observe(panel);
+  document.fonts.ready.then(updateLayout);
+  window.addEventListener("load", updateOnScroll, { once: true });
+  updateLayout();
 }

@@ -83,8 +83,13 @@ when opened. The supplied originals remain in `assets/robotics/`.
 The gallery supports keyboard navigation, Escape to close, touch swipes, and
 focus restoration. Scroll reveals and hover zoom respect the motion preference.
 
-On screens up to 800px, project images appear inside each project and navigation
-uses a native modal dialog with focus containment, Escape, and a close button.
+On screens up to 800px, both hero-name lines are centered. When the viewport is
+at least 560px tall, one app preview stays below the portrait navigation pill and
+crossfades as each project enters the reading area. The preview releases at the
+end of the app list; scrolling remains native in both directions. Short landscape
+viewports and visits without JavaScript keep an image inside each project.
+Mobile navigation uses a native modal dialog with focus containment, Escape,
+and a close button.
 Desktop previews respond to scrolling and keyboard focus; hover adds a floating
 image with a small velocity-based tilt that settles when the pointer stops.
 The hero and contact headings soften individual letter weights near the pointer;

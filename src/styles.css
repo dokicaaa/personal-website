@@ -1396,7 +1396,18 @@ em {
     display: none;
   }
   .hero-title {
-    padding-block: 100px 65px;
+    padding-block: clamp(64px, 9svh, 100px) 58px;
+  }
+  .first-name,
+  .last-name {
+    text-align: center;
+  }
+  .first-name {
+    font-size: min(28.5cqw, 200px);
+  }
+  .last-name {
+    font-size: min(19.3cqw, 136px);
+    padding-top: 0.27em;
   }
   .hero-bottom p {
     font-size: 18px;
@@ -1441,6 +1452,66 @@ em {
     width: 85%;
     height: 85%;
     object-fit: contain;
+  }
+  /* The preview stays above the reading area while the project rows scroll.
+     JS enables this only when the viewport has enough height; otherwise the
+     inline images remain the touch-friendly and no-JS fallback. */
+  .work-layout.has-mobile-preview {
+    display: flex;
+    flex-direction: column;
+    --mobile-preview-top: 88px;
+  }
+  .has-mobile-preview .project-preview {
+    display: block;
+    order: -1;
+    align-self: stretch;
+    top: var(--mobile-preview-top);
+    z-index: 5;
+    padding-block: 8px 16px;
+    background: var(--background);
+    box-shadow: 0 -12px 0 var(--background);
+  }
+  .has-mobile-preview .preview-stage {
+    height: clamp(160px, 28svh, 260px);
+    aspect-ratio: auto;
+  }
+  .has-mobile-preview .preview-image {
+    padding: 10px 12px;
+  }
+  .has-mobile-preview .preview-image[data-preview="base42"] {
+    padding: 6px;
+  }
+  .has-mobile-preview .preview-caption {
+    flex-wrap: nowrap;
+    font-size: 9px;
+    margin-top: 12px;
+  }
+  .has-mobile-preview .preview-progress {
+    margin-top: 10px;
+  }
+  .has-mobile-preview .project-list {
+    width: 100%;
+  }
+  .has-mobile-preview .project-row {
+    scroll-margin-top: calc(
+      var(--mobile-preview-top) + var(--mobile-preview-height) + 16px
+    );
+  }
+  .has-mobile-preview .project-link {
+    min-height: min(440px, 52svh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .has-mobile-preview .project-row h3 {
+    color: var(--muted);
+  }
+  .has-mobile-preview .project-row.is-active h3,
+  .has-mobile-preview .project-link:focus-visible h3 {
+    color: var(--text);
+  }
+  .has-mobile-preview .project-mobile-media {
+    display: none;
   }
   .section {
     padding-block: 80px;
@@ -1562,14 +1633,7 @@ em {
     display: none;
   }
   .hero-title {
-    padding-block: 72px 54px;
-  }
-  .first-name {
-    font-size: 25cqw;
-  }
-  .last-name {
-    padding-top: 0.27em;
-    font-size: 17cqw;
+    padding-block: clamp(56px, 8svh, 72px) 48px;
   }
   .hero-bottom {
     flex-direction: column;
