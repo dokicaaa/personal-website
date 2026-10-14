@@ -43,8 +43,6 @@ export function initProjectPreviews() {
     document.querySelectorAll("[data-preview-number]").forEach((number) => {
       number.textContent = row.dataset.projectNumber;
     });
-    document.querySelector("[data-preview-category]").textContent =
-      row.dataset.projectCategory;
     document.querySelector(".preview-progress span").style.width =
       `${((rows.indexOf(row) + 1) / rows.length) * 100}%`;
     gsap.to(".preview-watermark", {

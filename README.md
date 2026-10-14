@@ -98,9 +98,10 @@ cursor ring expands to View or Email on relevant links, and hides during keyboar
 navigation. These pointer effects only run on fine-pointer desktop devices.
 The native mouse pointer and native document scrolling remain available.
 
-The Pause motion button disables animation and restores visible content. Its
-preference is saved locally when storage is available. The site also respects
-system reduced-motion preferences, which take priority over the page control.
+Motion runs automatically and follows the system reduced-motion preference.
+Reduced motion disables the marquee and decorative transitions while keeping
+all content visible and app previews synchronized with scrolling. The former
+manual pause setting is removed from local storage on load.
 Images are displayed in their original colors. About uses a shortened version of
 the original portfolio bio in the animated statement, followed by the portrait
 and toolkit. All experience roles, including the Base42 software development internship,

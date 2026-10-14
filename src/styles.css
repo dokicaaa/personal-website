@@ -435,9 +435,6 @@ em {
   margin-top: 60px;
   color: var(--muted);
 }
-.hero-index > :last-child {
-  margin-left: auto;
-}
 .marquee {
   overflow: hidden;
   border-block: 1px solid var(--line);
@@ -492,7 +489,7 @@ em {
   color: var(--muted);
   margin-bottom: 68px;
 }
-.section-top > :last-child {
+.section-top > :last-child:not(:first-child) {
   text-align: right;
 }
 .section-heading {
@@ -513,26 +510,6 @@ em {
   font-size: 17px;
   line-height: 1.5;
   max-width: 280px;
-}
-.motion-toggle {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-left: auto;
-  margin-right: 24px;
-  background: none;
-  text-transform: uppercase;
-  font: inherit;
-  padding: 10px 0;
-}
-.motion-dot {
-  width: 5px;
-  height: 5px;
-  background: var(--text);
-  border-radius: 50%;
-}
-.motion-paused .motion-dot {
-  background: #777;
 }
 .motion-paused .marquee-track {
   animation-play-state: paused;
@@ -664,14 +641,9 @@ em {
 }
 .preview-caption {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
   margin-top: 17px;
   color: var(--muted);
   font-size: 10px;
-}
-.preview-caption > :last-child {
-  text-align: right;
 }
 .preview-progress {
   height: 1px;
@@ -772,13 +744,7 @@ em {
   gap: 10%;
   align-items: start;
 }
-.robotics-copy > p:first-child {
-  font-size: clamp(28px, 2.5vw, 42px);
-  letter-spacing: -0.035em;
-  line-height: 1.1;
-  margin-bottom: 26px;
-}
-.robotics-copy > p + p {
+.robotics-copy > p {
   font-size: 17px;
   color: #b0b0b0;
   line-height: 1.6;
@@ -984,10 +950,6 @@ em {
   margin-top: 100px;
 }
 .experience-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 24px;
   margin-bottom: 32px;
 }
 .experience-heading h3 {
@@ -995,7 +957,10 @@ em {
   font-weight: 550;
   letter-spacing: -0.035em;
 }
-.experience-heading .text-link {
+.experience-footer {
+  margin-top: 24px;
+}
+.experience-footer .text-link {
   margin-top: 0;
 }
 .experience-list {
@@ -1183,11 +1148,6 @@ em {
   object-fit: cover;
   border-radius: 3px;
 }
-.about-portrait figcaption {
-  font-size: 10px;
-  color: var(--muted);
-  padding-top: 15px;
-}
 .toolbox h3 {
   color: var(--muted);
   margin-bottom: 24px;
@@ -1347,9 +1307,6 @@ em {
   .project-year {
     font-size: 9px;
   }
-  .preview-caption {
-    flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 800px) {
@@ -1482,7 +1439,6 @@ em {
     padding: 6px;
   }
   .has-mobile-preview .preview-caption {
-    flex-wrap: nowrap;
     font-size: 9px;
     margin-top: 12px;
   }
@@ -1528,10 +1484,7 @@ em {
   .robotics-intro {
     gap: 40px;
   }
-  .robotics-copy > p:first-child {
-    font-size: 26px;
-  }
-  .robotics-copy > p + p {
+  .robotics-copy > p {
     font-size: 16px;
   }
   .robotics-gallery {
@@ -1671,15 +1624,11 @@ em {
     margin-bottom: 38px;
     gap: 10px;
   }
-  .section-top > :last-child {
+  .section-top > :last-child:not(:first-child) {
     max-width: 50%;
   }
   .apps-section .section-top > :last-child {
     display: none;
-  }
-  .motion-toggle {
-    margin-right: 0;
-    font-size: 9px;
   }
   .section-heading {
     display: block;
@@ -1718,9 +1667,6 @@ em {
   .robotics-intro {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-  .robotics-copy > p:first-child {
-    font-size: 28px;
   }
   .robotics-photo figcaption {
     inset: auto 12px 12px;
@@ -1772,7 +1718,7 @@ em {
     aspect-ratio: 1.12;
   }
   .web-project-image img {
-    width: 100%;
+    width: 88%;
   }
   .web-project-label {
     top: 18px;
@@ -1817,9 +1763,6 @@ em {
     max-width: 260px;
   }
   .experience-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
     margin-bottom: 24px;
   }
   .toolbox li {
@@ -1838,6 +1781,12 @@ em {
   }
   .contact-arrow {
     font-size: 25vw;
+    width: 0.8em;
+    min-width: 0;
+  }
+  .contact-arrow .icon-arrow {
+    width: 100%;
+    height: auto;
   }
   .contact-bottom {
     margin-top: 40px;

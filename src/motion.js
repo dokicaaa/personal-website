@@ -3,19 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const preferenceKey = "portfolio-motion-paused";
-
 export function initMotion() {
   const root = document.documentElement;
   const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const toggle = document.querySelector(".motion-toggle");
-  const label = toggle.querySelector("[data-motion-label]");
-  let userPaused = false;
   let context;
   let hasPlayedIntro = false;
 
   try {
-    userPaused = localStorage.getItem(preferenceKey) === "true";
+    // Retire the old manual setting; only the system preference controls motion.
+    localStorage.removeItem("portfolio-motion-paused");
   } catch {
     /* Storage may be unavailable. */
   }
@@ -42,14 +38,8 @@ export function initMotion() {
 
   function applyMotion() {
     context?.revert();
-    const paused = preference.matches || userPaused;
+    const paused = preference.matches;
     root.classList.toggle("motion-paused", paused);
-    toggle.setAttribute("aria-pressed", String(paused));
-    label.textContent = paused ? "Enable motion" : "Pause motion";
-    toggle.title = preference.matches
-      ? "Reduced motion is enabled in your system preferences"
-      : "";
-    toggle.disabled = preference.matches;
     document.dispatchEvent(
       new CustomEvent("portfolio:motion", { detail: { paused } }),
     );
@@ -135,16 +125,6 @@ export function initMotion() {
     ScrollTrigger.refresh();
   }
 
-  toggle.hidden = false;
-  toggle.addEventListener("click", () => {
-    userPaused = !root.classList.contains("motion-paused");
-    try {
-      localStorage.setItem(preferenceKey, String(userPaused));
-    } catch {
-      /* The control still works without persistence. */
-    }
-    applyMotion();
-  });
   preference.addEventListener("change", applyMotion);
   window
     .matchMedia("(min-width: 801px)")
